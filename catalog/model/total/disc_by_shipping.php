@@ -1,11 +1,10 @@
 <?php
-class ModelTotalDiscountByShipping extends Model {
+class ModelTotaldiscbyshipping extends Model {
 
     public function getTotal(&$total_data, &$total, &$taxes) {
 
         $code = $this->config->get('disc_by_shipping_code');
-
-        if ( isset($this->session->data['shipping_method']['code']) && !empty($code) && $this->session->data['shipping_method']['code'] == $code ) {
+        if ( isset($this->session->data['shipping_method']['code']) && !empty($code) && is_string(stristr($this->session->data['shipping_method']['code'],$code ))) {
 
             $min = $this->config->get('disc_by_shipping_min');
             if ( is_numeric($min) && $total < $min ) return;
@@ -16,7 +15,7 @@ class ModelTotalDiscountByShipping extends Model {
             
     
             $cats = $this->config->get('disc_by_shipping_categories');
-            if ( in_array(0,$cats) ) $cats = array();
+            if (!empty($cats) && in_array(0,$cats)) $cats = array();
             $discount = $this->config->get('disc_by_shipping_amount');
             $percent = $this->config->get('disc_by_shipping_percent');
 
