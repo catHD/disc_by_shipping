@@ -3,12 +3,12 @@
 $_['heading_title']    = 'Скидка/наценка на способ доставки';
 
 // Text
-$_['text_total']       = 'Order Totals';
-$_['text_success']     = 'Success';
-$_['text_msg_default'] = 'Special price for Shipping type';
+$_['text_total']       = 'Общая сумма заказа';
+$_['text_success']     = 'Выполнено';
+$_['text_msg_default'] = 'Специальная цена в зависимости от доставки';
 
 // Entry
-$_['entry_amount']     = 'Значение: <br />(задание со "-" означает скидку, иначе наценка)';
+$_['entry_amount']     = 'Значение: <br />(задание с "-" означает скидку, иначе наценка)';
 $_['entry_status']     = 'Статус:';
 $_['entry_code']       = 'Код метода доставки:';
 $_['entry_sort_order'] = 'Позиция в заказе:';
@@ -18,5 +18,5 @@ $_['entry_msg']        = 'Сообщение в заказе';
 
 // Error
 $_['error_range']      = 'Значение не попадет в допустимый диапазон';
-$_['error_permission'] = 'Warning: You do not have permission to modify low order fee total!';
+$_['error_permission'] = 'У Вас нет прав для доступа к этой странице. Если она Вам нужна, обратитесь к администратору.';
 ?>
